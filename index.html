@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مختبر الأمن السيبراني</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #101827;
+      color: white;
+      text-align: center;
+      padding: 35px 15px;
+    }
+    .box {
+      background: #202d40;
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 380px;
+      margin: auto;
+    }
+    input, button {
+      padding: 13px;
+      margin: 10px;
+      width: 85%;
+      border-radius: 8px;
+      border: 0;
+    }
+    button {
+      background: #238636;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>مختبر الأمن السيبراني</h2>
+    <p>هذه صفحة محاكاة تعليمية</p>
+    <input id="demo" placeholder="اكتب كلمة تجريبية فقط">
+    <button onclick="test()">اختبار</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function test() {
+      document.getElementById("result").textContent =
+        "تم الاختبار بنجاح. لم يتم إرسال أو حفظ أي بيانات.";
+    }
+  </script>
+</body>
+</html>
