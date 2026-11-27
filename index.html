@@ -1,65 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cybersecurity Lab</title>
+<title>محاكاة وهمية</title>
 <style>
 body {
-  background:#101827;
-  color:white;
-  font-family:Arial,sans-serif;
-  text-align:center;
-  padding:25px 12px;
+  margin: 0;
+  padding: 55px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: white;
 }
-.box {
-  max-width:420px;
-  margin:30px auto;
-  padding:25px;
-  background:#202d40;
-  border-radius:15px;
+h1 { font-size: 30px; font-weight: 500; }
+h2 { font-size: 20px; font-weight: 400; margin-top: 35px; }
+.panel {
+  max-width: 350px;
+  margin: 25px auto;
+  padding: 22px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+input {
+  width: 90%;
+  padding: 13px;
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
 }
 button {
-  padding:13px 22px;
-  margin:8px;
-  border:0;
-  border-radius:8px;
-  background:#238636;
-  color:white;
-  font-size:16px;
+  margin-top: 15px;
+  padding: 12px 25px;
+  border: 0;
+  border-radius: 5px;
+  background: #168b78;
+  color: white;
 }
-.result {
-  margin-top:20px;
-  padding:12px;
-  background:#142235;
-  border-radius:8px;
-}
+.note { color: #777; font-size: 13px; }
+#result { margin-top: 15px; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
-<div class="box">
-  <h1>مختبر الأمن السيبراني</h1>
-  <p>بيئة تعليمية لاختبار أمان الروابط</p>
-  <hr>
-  <h3>اختبار فتح الصفحة</h3>
-  <p>اضغط الزر لمعرفة نتيجة الاختبار.</p>
-  <button onclick="runTest()">ابدأ الاختبار</button>
-  <div class="result" id="result">
-    بانتظار الاختبار...
-  </div>
+<h1>واتساب</h1>
+<h2>إدخال رمز تحقق</h2>
+<div class="panel">
+  <strong>إدخال رمز تحقق</strong>
+  <p class="note">تجربة وهمية — لا تستخدم رمزاً حقيقياً</p>
+  <input id="code" placeholder="أدخل نصاً تجريبياً">
+  <button onclick="test()">اختبار</button>
+  <div id="result"></div>
 </div>
-
 <script>
-function runTest() {
-  const browser = navigator.userAgent;
-  const time = new Date().toLocaleString('ar');
-
-  document.getElementById('result').innerHTML =
-    '<b>نتيجة الاختبار</b><br>' +
-    'تم فتح الصفحة بنجاح.<br>' +
-    'وقت الزيارة: ' + time + '<br>' +
-    'المتصفح: ' + browser +
-    '<br><br>لم يتم إرسال أو حفظ بيانات شخصية.';
+function test() {
+  const value = document.getElementById("code").value;
+  document.getElementById("result").textContent =
+    value ? "تم استلام الإدخال التجريبي بنجاح." : "أدخل قيمة للاختبار.";
 }
 </script>
 </body>
